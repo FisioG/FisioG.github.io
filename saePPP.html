@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mon portfolio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="saePPP.css">
+        <script>
+            function myMove2() {
+                var elem = document.getElementById("menuSlide");
+                var larg = elem.offsetWidth;
+                var gauche = getComputedStyle(elem);
+                gauche = gauche.left;
+                elem.animate([
+                { // from
+                    left: gauche,
+                    opacity : 0
+                },
+                { // to
+                    left: 0,
+                    opacity : 1
+                }
+                ], 500);
+                elem.style.left = 0
+               
+            }
+            function myMove() {
+                var elem = document.getElementById("menuSlide");
+                var larg = elem.offsetWidth;
+                var gauche = getComputedStyle(elem);
+                gauche = gauche.left;
+                elem.animate([
+                { // from
+                    left: gauche,
+                    opacity : 1
+                },
+                { // to
+                    left: -30+'vw',
+                    opacity : 0
+                }
+                ], 500);
+                elem.style.left = -30+'vw';
+            }
+            var afficher = true;
+            function myFonction() {
+                if (afficher){
+                    afficher = false;
+                    myMove();
+                }
+                else {
+                    myMove2();
+                    afficher = true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <section id="menu">
+            <a href="" id="menu" onclick="myFonction();return(false)"><img src="saeppppbutton.png" id="buttonMenu"></a>
+        </section>
+        <section id="menuSlide">
+            <a>Projet 1</a>
+            <a>Projet 1</a>
+            <a>Projet 1</a>
+            <a>Projet 1</a>
+            <a>Projet 1</a>
+            <a>Projet 1</a>
+            <a>Projet 1</a>
+            <a>Projet 1</a>
+            <a>Projet 1</a>
+            <a>Projet 1</a>
+        </section>
+        <section class="decoupage" id="P1">
+            <h1>LEVEQUE Loïc</h1>
+            <h1>Portfolio</h1>
+        </section>
+        <section class="decoupage" id="P2">
+            <h1>Part 2</h1>
+        </section>
+        <section class="decoupage" id="P3">
+            <h1>Part 3</h1>
+        </section>
+        <footer>
+            <a href="">Contact</a>
+            <a href="#top">Acceuil</a>
+        </footer>
+    </body>
+</html>
