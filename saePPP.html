@@ -10,11 +10,14 @@
         <link rel="stylesheet" href="saePPP.css">
         <script>
             function myMove2() {
-                var elem = document.getElementById("menuSlide");
-                var larg = elem.offsetWidth;
-                var gauche = getComputedStyle(elem);
+                var burgerButton = document.getElementById("buttonMenu");
+                var burgerSlide = document.getElementById("menuSlide");
+                var gauche = getComputedStyle(burgerSlide);
+                var rota = getComputedStyle(burgerButton);
+                rota = rota.offsetRotate;
+                console.log(rota);
                 gauche = gauche.left;
-                elem.animate([
+                burgerSlide.animate([
                 { // from
                     left: gauche,
                     opacity : 0
@@ -23,16 +26,27 @@
                     left: 0,
                     opacity : 1
                 }
-                ], 500);
-                elem.style.left = 0
+                ], 400);
+                
+                burgerButton.animate([
+                    {
+                        transform : 'rotate(0deg)'
+                    },
+                    {
+                        transform : 'rotate(-90deg)'
+                    }
+                ],400)
+                burgerSlide.style.left = 0;
+                burgerButton.style.transform = 'rotate(-90deg)';
                
             }
             function myMove() {
-                var elem = document.getElementById("menuSlide");
-                var larg = elem.offsetWidth;
-                var gauche = getComputedStyle(elem);
+                var burgerButton = document.getElementById("buttonMenu");
+                var burgerSlide = document.getElementById("menuSlide");
+                var larg = burgerSlide.offsetWidth;
+                var gauche = getComputedStyle(burgerSlide);
                 gauche = gauche.left;
-                elem.animate([
+                burgerSlide.animate([
                 { // from
                     left: gauche,
                     opacity : 1
@@ -41,10 +55,20 @@
                     left: -30+'vw',
                     opacity : 0
                 }
-                ], 500);
-                elem.style.left = -30+'vw';
+                ], 400);
+                burgerButton.animate([
+                    {
+                        transform : 'rotate(-90deg)'
+                    },
+                    {
+                        transform : 'rotate(0deg)'
+                    }
+                ],500)
+                
+                burgerButton.style.transform = 'rotate(0deg)';
+                burgerSlide.style.left = -30+'vw';
             }
-            var afficher = true;
+            var afficher = false;
             function myFonction() {
                 if (afficher){
                     afficher = false;
@@ -58,7 +82,7 @@
         </script>
     </head>
     <body>
-        <section id="menu">
+        <section >
             <a href="" id="menu" onclick="myFonction();return(false)"><img src="saeppppbutton.png" id="buttonMenu"></a>
         </section>
         <section id="menuSlide">
