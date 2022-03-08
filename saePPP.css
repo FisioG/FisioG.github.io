@@ -10,8 +10,10 @@ body {
     justify-content: space-around;
     background-color: aqua;
     height: max-content;
-    width: 30vw;
-    left : -30vw;
+    width: 20vw;
+    min-width: 50px;
+    left : -20vw;
+    border-bottom-right-radius: 15px;
 }
 @keyframes animGauche {
     0% { top: 0; left: 0%; }
@@ -28,6 +30,9 @@ body {
     transition: width 0.9s, height 0.9s;
     position:absolute;
     z-index: 10;
+}
+#P2 img {
+    visibility: hidden;
 }
 
 h1 {

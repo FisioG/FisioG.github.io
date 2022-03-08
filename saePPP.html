@@ -9,18 +9,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="saePPP.css">
         <script>
-            function myMove2() {
+            function ouvrir() {
                 var burgerButton = document.getElementById("buttonMenu");
                 var burgerSlide = document.getElementById("menuSlide");
-                var gauche = getComputedStyle(burgerSlide);
+                var proprietesSlide = getComputedStyle(burgerSlide);
                 var rota = getComputedStyle(burgerButton);
+                var opacityNow = proprietesSlide.opacity;
                 rota = rota.offsetRotate;
                 console.log(rota);
-                gauche = gauche.left;
+                gauche = proprietesSlide.left;
                 burgerSlide.animate([
                 { // from
                     left: gauche,
-                    opacity : 0
+                    opacity : opacityNow
                 },
                 { // to
                     left: 0,
@@ -38,21 +39,30 @@
                 ],400)
                 burgerSlide.style.left = 0;
                 burgerButton.style.transform = 'rotate(-90deg)';
+                burgerSlide.style.opacity = 1;
                
             }
-            function myMove() {
+            window.onscroll = function(e) {
+            if(this.oldScroll > 200) {
+                document.getElementById("image").style.visibility = 'visible';
+                }
+            this.oldScroll = this.scrollY;
+            }
+            
+            function fermer() {
                 var burgerButton = document.getElementById("buttonMenu");
                 var burgerSlide = document.getElementById("menuSlide");
                 var larg = burgerSlide.offsetWidth;
-                var gauche = getComputedStyle(burgerSlide);
-                gauche = gauche.left;
+                var proprietesSlide = getComputedStyle(burgerSlide);
+                var opacityNow = proprietesSlide.opacity;
+                gauche = proprietesSlide.left;
                 burgerSlide.animate([
                 { // from
                     left: gauche,
-                    opacity : 1
+                    opacity : opacityNow
                 },
                 { // to
-                    left: -30+'vw',
+                    left: -larg+'px',
                     opacity : 0
                 }
                 ], 400);
@@ -64,18 +74,19 @@
                         transform : 'rotate(0deg)'
                     }
                 ],500)
-                
                 burgerButton.style.transform = 'rotate(0deg)';
-                burgerSlide.style.left = -30+'vw';
+                burgerSlide.style.left = -larg+'px';
+                burgerSlide.style.opacity = 0;
             }
             var afficher = false;
             function myFonction() {
                 if (afficher){
+                    fermer();
                     afficher = false;
-                    myMove();
+                    
                 }
                 else {
-                    myMove2();
+                    ouvrir();
                     afficher = true;
                 }
             }
@@ -103,6 +114,7 @@
         </section>
         <section class="decoupage" id="P2">
             <h1>Part 2</h1>
+            <img src="robotHolo.png" id="image" alt="Image d'un robot holonome à 3 roues">
         </section>
         <section class="decoupage" id="P3">
             <h1>Part 3</h1>
