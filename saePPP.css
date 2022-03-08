@@ -40,9 +40,10 @@ footer {
     padding-bottom: 20px;
     width: 100%;
 }
-#menu {
+#menu:hover {
     width: 60px;
     height: 60px;
+    rotate: 90deg;
 }
 #buttonMenu:hover {
     width: 60px;
