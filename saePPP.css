@@ -8,21 +8,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: aqua;
+    background-color: #06bcc1;
     height: max-content;
-    width: 20vw;
+    width: 10vw;
     min-width: 50px;
+    min-height: 100px;
     left : -20vw;
     border-bottom-right-radius: 15px;
 }
-@keyframes animGauche {
-    0% { top: 0; left: 0%; }
-    15% { left:15% }
-    30% { left: 30%; }
-    68% { left: 50%; }
-    100% {left: 100%; }
-}
-
 
 #menu,#buttonMenu {
     width: 50px;
@@ -40,6 +33,11 @@ h1 {
     margin: 0;
 }
 
+#maPhoto {
+    width: 300px;
+    height: 400px;
+}
+
 footer {
     bottom: 0;
     text-align: center;
@@ -50,6 +48,7 @@ footer {
 #buttonMenu:hover {
     width: 60px;
     height: 60px;
+    color: #0c717e;
 }
 
 .decoupage {
@@ -57,9 +56,48 @@ footer {
     height: 50vh;
     margin: 0;
 }
-#P1,#P3 {
-    background:linear-gradient(to left top,rgba(179, 9, 9, 0.938), rgb(0, 38, 255)) no-repeat;
+
+#P1APropos {
+    width: auto;
+    margin: 20px;
+}
+#P1Photo {
+    width: 800vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color :#f4edea;
+}
+#P1 {
+    display: flex;
+    justify-content: space-around;
+    background-color:#f4d1ae;
 }
 #P2 {
-    background:linear-gradient(to left bottom,rgba(179, 9, 9, 0.938), rgb(0, 38, 255)) no-repeat;
+    background-color: #12263a;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+}
+#friseSup {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+}
+footer {
+    background-color: #0c717e;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#frise {
+    width: 15px;
+    border: 2px solid blue;
+    background-color: #f4edea;
+    height: 800px;
+    border-radius: 5rem;
+    
 }

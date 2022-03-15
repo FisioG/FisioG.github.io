@@ -43,9 +43,12 @@
                
             }
             window.onscroll = function(e) {
-            if(this.oldScroll > 200) {
+            if(this.oldScroll > this.scrollY) {
                 document.getElementById("image").style.visibility = 'visible';
                 }
+            else {
+                document.getElementById("image").style.visibility = 'hidden';
+            }
             this.oldScroll = this.scrollY;
             }
             
@@ -109,15 +112,31 @@
             <a>Projet 1</a>
         </section>
         <section class="decoupage" id="P1">
-            <h1>LEVEQUE Loïc</h1>
-            <h1>Portfolio</h1>
+            <div id="P1APropos">
+                <h1>A propos de moi</h1>
+                <p>
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec suscipit nisi. Praesent consectetur ultricies leo, vitae aliquet orci feugiat sit amet. Mauris vel odio eros. Praesent non venenatis justo. Nunc egestas felis a ante consectetur pulvinar. Integer feugiat velit in scelerisque tincidunt. Curabitur in vulputate metus. Morbi sed nisl lacus. Donec aliquam lacinia fringilla. Nulla sit amet quam ut mi condimentum facilisis eu in urna.
+                    
+                    Cras in vestibulum lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum nulla et metus laoreet fermentum. Etiam imperdiet rutrum justo, eu euismod nibh gravida eget. Curabitur quis hendrerit tortor, non scelerisque ante. Fusce sit amet pretium erat. Pellentesque non lectus vel velit ornare placerat. Sed in porta odio. Aliquam erat volutpat. Mauris in lorem consectetur, bibendum leo ac, scelerisque diam. Morbi volutpat massa mattis nibh consequat mollis.
+                    
+                    Ut nibh eros, efficitur id lacus ac, posuere viverra quam. Maecenas maximus dictum lacus eu ultrices. Donec eget lacus ipsum. Phasellus et ornare ipsum, vel cursus turpis. Nam sed imperdiet turpis, et aliquam enim. Curabitur imperdiet auctor erat, non sodales mi faucibus sed. Nullam efficitur nisl id est vestibulum volutpat. In blandit blandit massa in faucibus. Etiam sit amet ligula venenatis, pharetra sapien at, maximus nulla. Praesent sed venenatis est. Duis convallis volutpat ipsum a dictum. Phasellus a fermentum lectus.
+                    
+                    Duis nulla quam, imperdiet imperdiet facilisis at, suscipit tempus lacus. In ullamcorper tellus at volutpat aliquam. Sed facilisis, lorem eget eleifend ornare, mi lectus tincidunt velit, quis blandit felis erat id velit. Nunc ac risus eu lorem accumsan laoreet quis laoreet augue. Vestibulum elementum risus auctor nisl fermentum, ut aliquet velit tristique. Ut felis lectus, dignissim vitae urna ut, accumsan cursus massa. Ut tempor ipsum a sem laoreet eleifend. Donec venenatis vulputate augue. Fusce vitae eros turpis. Nunc tincidunt justo vel ligula condimentum, et porta justo rutrum.
+                    
+                    Etiam sed commodo velit. Nam volutpat lacinia purus et iaculis. Cras maximus semper pellentesque. Vestibulum luctus sagittis consequat. Phasellus vehicula lobortis nunc, quis scelerisque metus fermentum vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut a ligula tempus dui tincidunt vulputate. Vivamus et facilisis dolor. Sed sed aliquam ipsum, nec euismod urna. Phasellus vel enim eu nulla suscipit varius. Nunc suscipit nunc neque, ac hendrerit libero porta in. </p>
+            </div>
+            <div id="P1Photo">
+                <img id="maPhoto" src="robotHolo.png">
+            </div>
         </section>
         <section class="decoupage" id="P2">
             <h1>Part 2</h1>
-            <img src="robotHolo.png" id="image" alt="Image d'un robot holonome à 3 roues">
-        </section>
-        <section class="decoupage" id="P3">
-            <h1>Part 3</h1>
+            <div id="friseSup">
+                <div id="frise">
+                </div>
+            </div>
+            
         </section>
         <footer>
             <a href="">Contact</a>
