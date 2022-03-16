@@ -11,10 +11,10 @@
         <script>
             function ouvrir() {
                 var divliens = document.getElementById("liensSlide");
-                var burgerButton = document.getElementById("buttonMenu");
                 var burgerSlide = document.getElementById("menuSlide");
+                var burgerButton = document.querySelector(".menu-btn");
+                var propBtn = getComputedStyle(burgerButton);
                 var proprietesSlide = getComputedStyle(burgerSlide);
-                var propButton = getComputedStyle(burgerButton);
                 var opacityNow = proprietesSlide.opacity;
                 gauche = proprietesSlide.left;
                 burgerSlide.animate([
@@ -27,18 +27,8 @@
                     opacity : 1
                 }
                 ], 400);
-                
-                burgerButton.animate([
-                    {
-                        transform : 'rotate(0deg)'
-                    },
-                    {
-                        transform : 'rotate(-90deg)'
-                    }
-                ],400)
-                divliens.style.marginTop = propButton.height;
+                divliens.style.marginTop = propBtn.height;
                 burgerSlide.style.left = 0;
-                burgerButton.style.transform = 'rotate(-90deg)';
                 burgerSlide.style.opacity = 1;
                
             }
@@ -53,10 +43,7 @@
             }
             
             
-            var burgerButton = document.getElementById("buttonMenu");
-            
             function fermer() {
-                var burgerButton = document.getElementById("buttonMenu");
                 var burgerSlide = document.getElementById("menuSlide");
                 var larg = burgerSlide.offsetWidth;
                 var proprietesSlide = getComputedStyle(burgerSlide);
@@ -72,36 +59,33 @@
                     opacity : 0
                 }
                 ], 400);
-                burgerButton.animate([
-                    {
-                        transform : 'rotate(-90deg)'
-                    },
-                    {
-                        transform : 'rotate(0deg)'
-                    }
-                ],500)
-                burgerButton.style.transform = 'rotate(0deg)';
                 burgerSlide.style.left = -larg+'px';
                 burgerSlide.style.opacity = 0;
-            }
-            var afficher = false;
-            function myFonction() {
-                if (afficher){
-                    fermer();
-                    afficher = false;
-                    
-                }
-                else {
-                    ouvrir();
-                    afficher = true;
-                }
             }
         </script>
     </head>
     <body>
-        <section >
-            <a href="" id="menu" onclick="myFonction();return(false)"><img src="saeppppbutton.png" id="buttonMenu"></a>
-        </section>
+        <div class="menu-btn">
+            <div class="menu-btn__burger"><a></a></div>
+        </div>
+        <script>
+            const menuBtn = document.querySelector('.menu-btn');
+            let menuOpen = false;
+            let afficher = false;
+            menuBtn.addEventListener('click', () => {
+            if(!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+                ouvrir();
+                afficher = true;
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+                fermer();
+                afficher = false;
+            }
+            });
+        </script>
         <section id="menuSlide">
             <ul id="liensSlide">
                 <li>Projet 1</li>
@@ -115,7 +99,6 @@
                 <li>Projet 1</li>
                 <li>Projet 1</li>
             </ul>
-            
         </section>
         <section class="decoupage" id="P1">
             <div id="P1APropos">
