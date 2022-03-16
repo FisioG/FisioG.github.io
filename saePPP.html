@@ -10,13 +10,12 @@
         <link rel="stylesheet" href="saePPP.css">
         <script>
             function ouvrir() {
+                var divliens = document.getElementById("liensSlide");
                 var burgerButton = document.getElementById("buttonMenu");
                 var burgerSlide = document.getElementById("menuSlide");
                 var proprietesSlide = getComputedStyle(burgerSlide);
-                var rota = getComputedStyle(burgerButton);
+                var propButton = getComputedStyle(burgerButton);
                 var opacityNow = proprietesSlide.opacity;
-                rota = rota.offsetRotate;
-                console.log(rota);
                 gauche = proprietesSlide.left;
                 burgerSlide.animate([
                 { // from
@@ -37,6 +36,7 @@
                         transform : 'rotate(-90deg)'
                     }
                 ],400)
+                divliens.style.marginTop = propButton.height;
                 burgerSlide.style.left = 0;
                 burgerButton.style.transform = 'rotate(-90deg)';
                 burgerSlide.style.opacity = 1;
@@ -51,6 +51,9 @@
             }
             this.oldScroll = this.scrollY;
             }
+            
+            
+            var burgerButton = document.getElementById("buttonMenu");
             
             function fermer() {
                 var burgerButton = document.getElementById("buttonMenu");
@@ -100,16 +103,19 @@
             <a href="" id="menu" onclick="myFonction();return(false)"><img src="saeppppbutton.png" id="buttonMenu"></a>
         </section>
         <section id="menuSlide">
-            <a>Projet 1</a>
-            <a>Projet 1</a>
-            <a>Projet 1</a>
-            <a>Projet 1</a>
-            <a>Projet 1</a>
-            <a>Projet 1</a>
-            <a>Projet 1</a>
-            <a>Projet 1</a>
-            <a>Projet 1</a>
-            <a>Projet 1</a>
+            <div id="liensSlide">
+                <a class="lienSlide">Projet 1</a>
+                <a class="lienSlide">Projet 1</a>
+                <a class="lienSlide">Projet 1</a>
+                <a class="lienSlide">Projet 1</a>
+                <a class="lienSlide">Projet 1</a>
+                <a class="lienSlide">Projet 1</a>
+                <a class="lienSlide">Projet 1</a>
+                <a class="lienSlide">Projet 1</a>
+                <a class="lienSlide">Projet 1</a>
+                <a class="lienSlide">Projet 1</a>
+            </div>
+            
         </section>
         <section class="decoupage" id="P1">
             <div id="P1APropos">
