@@ -8,6 +8,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="saePPP.css">
+        <link rel="stylesheet" href="frise.css">
         <script>
             function ouvrir() {
                 var divliens = document.getElementById("liensSlide");
@@ -33,15 +34,32 @@
                
             }
             window.onscroll = function(e) {
-            if(this.oldScroll > this.scrollY) {
-                document.getElementById("image").style.visibility = 'visible';
-                }
-            else {
-                document.getElementById("image").style.visibility = 'hidden';
-            }
-            this.oldScroll = this.scrollY;
+                const elts = document.querySelectorAll(".bulle");
+                Array.from(elts).forEach((element,index) => 
+                {
+                    var positions = elementPosition(element);
+                    
+                    if(this.scrollY >= (positions.clientY-50) && this.scrollY <= positions.clientY+element.offsetHeight+50)
+                    {
+                        console.log(element.offsetHeight + 'Taille du elt');
+                        console.log(positions.clientY + 'position de lelt');
+                        element.style.paddingTop = '400px';
+                    }
+                    else {
+                        element.style.paddingTop = '0px';
+                    }
+                })
             }
             
+            function elementPosition (a) {
+            var b = a.getBoundingClientRect();
+            return {
+                clientX: a.offsetLeft,
+                clientY: a.offsetTop,
+                viewportX: (b.x || b.left),
+                viewportY: (b.y || b.top)
+            }
+            }
             
             function fermer() {
                 var burgerSlide = document.getElementById("menuSlide");
@@ -120,10 +138,18 @@
             </div>
         </section>
         <section class="decoupage" id="P2">
-            <h1>Part 2</h1>
+            <h1>Frise des projets</h1>
             <div id="friseSup">
                 <div id="frise">
+                    <div class="bulle"></div>
+                    <div class="bulle"></div>
+                    <div class="bulle"></div>
+                    <div class="bulle"></div>
+                    <div class="bulle"></div>
+                    <div class="bulle"></div>
+                    <div class="bulle"></div>
                 </div>
+                
             </div>
             
         </section>
