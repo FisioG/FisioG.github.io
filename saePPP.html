@@ -9,98 +9,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="saePPP.css">
         <link rel="stylesheet" href="frise.css">
-        <script>
-            function ouvrir() {
-                var divliens = document.getElementById("liensSlide");
-                var burgerSlide = document.getElementById("menuSlide");
-                var burgerButton = document.querySelector(".menu-btn");
-                var propBtn = getComputedStyle(burgerButton);
-                var proprietesSlide = getComputedStyle(burgerSlide);
-                var opacityNow = proprietesSlide.opacity;
-                gauche = proprietesSlide.left;
-                burgerSlide.animate([
-                { // from
-                    left: gauche,
-                    opacity : opacityNow
-                },
-                { // to
-                    left: 0,
-                    opacity : 1
-                }
-                ], 400);
-                divliens.style.marginTop = propBtn.height;
-                burgerSlide.style.left = 0;
-                burgerSlide.style.opacity = 1;
-               
-            }
-            window.onscroll = function(e) {
-                const elts = document.querySelectorAll(".bulle");
-                Array.from(elts).forEach((element,index) => 
-                {
-                    var positions = elementPosition(element);
-                    
-                    if(this.scrollY >= (positions.clientY-50) && this.scrollY <= positions.clientY+element.offsetHeight+50)
-                    {
-                        console.log(element.offsetHeight + 'Taille du elt');
-                        console.log(positions.clientY + 'position de lelt');
-                        element.style.paddingTop = '400px';
-                    }
-                    else {
-                        element.style.paddingTop = '0px';
-                    }
-                })
-            }
-            
-            function elementPosition (a) {
-            var b = a.getBoundingClientRect();
-            return {
-                clientX: a.offsetLeft,
-                clientY: a.offsetTop,
-                viewportX: (b.x || b.left),
-                viewportY: (b.y || b.top)
-            }
-            }
-            
-            function fermer() {
-                var burgerSlide = document.getElementById("menuSlide");
-                var larg = burgerSlide.offsetWidth;
-                var proprietesSlide = getComputedStyle(burgerSlide);
-                var opacityNow = proprietesSlide.opacity;
-                gauche = proprietesSlide.left;
-                burgerSlide.animate([
-                { // from
-                    left: gauche,
-                    opacity : opacityNow
-                },
-                { // to
-                    left: -larg+'px',
-                    opacity : 0
-                }
-                ], 400);
-                burgerSlide.style.left = -larg+'px';
-                burgerSlide.style.opacity = 0;
-            }
-        </script>
+        <script src="burgerMenu.js"></script>
+        <script src="friseVerticale.js"></script>
+        <script>window.onscroll = function(e) {animationVerticale()}</script>
     </head>
     <body>
         <div class="menu-btn">
-            <div class="menu-btn__burger"><a></a></div>
+            <div class="menu-btn__burger"></div>
         </div>
         <script>
             const menuBtn = document.querySelector('.menu-btn');
             let menuOpen = false;
-            let afficher = false;
             menuBtn.addEventListener('click', () => {
             if(!menuOpen) {
                 menuBtn.classList.add('open');
                 menuOpen = true;
                 ouvrir();
-                afficher = true;
             } else {
                 menuBtn.classList.remove('open');
                 menuOpen = false;
                 fermer();
-                afficher = false;
             }
             });
         </script>
