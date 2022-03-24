@@ -5,14 +5,15 @@ function animationVerticale() {
         var positions = elementPosition(element);
         var propBulles = getComputedStyle(element);
         console.log(scrollY);
-        if(this.scrollY-200 >= (positions.clientY-200) && this.scrollY <= positions.clientY+400)
+        const milieu = (this.scrollY+window.innerHeight)/2;
+        if(milieu >= (positions.clientY-200) && milieu <= positions.clientY+200)
         { //Ouverture bulle
             element.animate([
-                {
+                {//From
                     paddingTop : propBulles.paddingTop,
                     paddingRight : propBulles.paddingRight,
                 },
-                {
+                {//To
                     paddingTop : '400px',
                     paddingRight : '1400px',
                 }
