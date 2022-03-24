@@ -6,7 +6,7 @@ function animationVerticale() {
         var propBulles = getComputedStyle(element);
         console.log(scrollY);
         if(this.scrollY-200 >= (positions.clientY-200) && this.scrollY <= positions.clientY+400)
-        {
+        { //Ouverture bulle
             element.animate([
                 {
                     paddingTop : propBulles.paddingTop,
@@ -20,7 +20,7 @@ function animationVerticale() {
             element.style.paddingTop = '400px';
             element.style.paddingRight = '1400px';
         }
-        else {
+        else { //Fermeture bulle
             element.animate([
                 {
                     paddingTop : propBulles.paddingTop,
