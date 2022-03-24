@@ -3,24 +3,45 @@ function animationVerticale() {
     Array.from(elts).forEach((element,index) => 
     {
         var positions = elementPosition(element);
-        
-        if(this.scrollY >= (positions.clientY-50) && this.scrollY <= positions.clientY+element.offsetHeight+50)
+        var propBulles = getComputedStyle(element);
+        console.log(scrollY);
+        if(this.scrollY-200 >= (positions.clientY-200) && this.scrollY <= positions.clientY+400)
         {
-            console.log(element.offsetHeight + 'Taille du elt');
-            console.log(positions.clientY + 'position de lelt');
+            element.animate([
+                {
+                    paddingTop : propBulles.paddingTop,
+                    paddingRight : propBulles.paddingRight,
+                },
+                {
+                    paddingTop : '400px',
+                    paddingRight : '1400px',
+                }
+            ],450);
             element.style.paddingTop = '400px';
+            element.style.paddingRight = '1400px';
         }
         else {
+            element.animate([
+                {
+                    paddingTop : propBulles.paddingTop,
+                    paddingRight : propBulles.paddingRight,
+                },
+                {
+                    paddingTop : '0px',
+                    paddingRight : '0px',
+                }
+            ],600);
             element.style.paddingTop = '0px';
+            element.style.paddingRight = '0px';
         }
     })
 }
 function elementPosition (a) {
 var b = a.getBoundingClientRect();
 return {
-    clientX: a.offsetLeft,
-    clientY: a.offsetTop,
-    viewportX: (b.x || b.left),
-    viewportY: (b.y || b.top)
+    clientX: a.offsetLeft, //Position abcisse en px par rapport à la fenetre
+    clientY: a.offsetTop, // Même chose en ordonnée
+    viewportX: (b.x || b.left),  //Position abcisse en px par rapport à la zone d'affichage
+    viewportY: (b.y || b.top) // Même chose en ordonnée
     }
 }
