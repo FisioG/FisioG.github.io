@@ -1,0 +1,106 @@
+/*-----Frise chronologique-----*/
+
+
+/*Code la TimeLine par George Martsoukos*/
+
+.Frise {
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: center;
+    border: solid;
+    border-color: black;
+    overflow-x: scroll;
+}
+
+.Frise ol {
+    font-size: 0;
+    width: 100vw;
+    padding: 250px 0;
+    transition: all 30ms;
+}
+
+.Frise ol li {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    width: 160px;
+    height: 3px;
+    background: #CACDD2;
+}
+
+.Frise ol li:last-child {
+    width: 280px
+}
+
+.Frise ol li:not(:first-child) {
+    margin-left: 14px;
+}
+
+.Frise ol li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1px);
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #D66853;
+}
+
+.Frise ol li div {
+    position: absolute;
+    left: calc(100% + 7px);
+    width: 280px;
+    padding: 15px;
+    font-size: 1rem;
+    white-space: normal;
+    color: black;
+    background: #CACDD2;
+}
+
+.Frise ol li div::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.Frise ol li:nth-child(odd) div {
+    top: -16px;
+    transform: translateY(-100%);
+}
+
+.Frise ol li:nth-child(odd) div::before {
+    top: 100%;
+    border-width: 8px 8px 0 0;
+    border-color: #CACDD2 transparent;
+}
+
+.Frise ol li:nth-child(even) div {
+    top: calc(100% + 16px);
+}
+
+.Frise ol li:nth-child(even) div::before {
+    top: -8px;
+    border-width: 8px 0 0 8px;
+    border-color: transparent #CACDD2;
+}
+
+.Frise time {
+    display: block;
+    font-size: 1.2rem;
+    font-size: bold;
+    margin-bottom: 8px;
+}
+
+.Frise a {
+    text-decoration: none;
+}
