@@ -1,24 +1,44 @@
 /*-----Frise chronologique-----*/
-
-
+#P2 h1 {
+    font-size: 4vw ;
+    color : #f4edea;
+    text-decoration:underline overline;
+    padding-bottom: 20px;
+}
 /*Code la TimeLine par George Martsoukos*/
 
 .Frise {
     white-space: nowrap;
     overflow-x: hidden;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     display: flex;
     justify-content: center;
-    border: solid;
-    border-color: black;
+    border:double 5px;
+    border-color: #102335;
+    border-radius: 15px;
     overflow-x: scroll;
+
+}
+
+.Frise::-webkit-scrollbar {
+    height: auto;
+    width: auto;
+}
+.Frise::-webkit-scrollbar-track {
+    background-color: #b1dbcc;
+    border-radius: 15px;
+}
+.Frise::-webkit-scrollbar-thumb {
+    background-color: #66cac9;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0,0.8);
+    border-radius: 15px;
 }
 
 .Frise ol {
     font-size: 0;
     width: 100vw;
-    padding: 250px 0;
+    padding: 225px 0;
     transition: all 30ms;
 }
 
@@ -31,15 +51,19 @@
     background: #CACDD2;
 }
 
-.Frise ol li:last-child {
+.Frise ol li:last-child { /* Correspond au dernier trait blanc*/
     width: 280px
 }
 
-.Frise ol li:not(:first-child) {
+.Frise ol li:first-child{
+    background : linear-gradient(to right, #cacdd200 80%,#cacdd2)
+}
+
+.Frise ol li:not(li:first-child) { /*Gère les traits blancs sauf le premier*/
     margin-left: 14px;
 }
 
-.Frise ol li:not(:last-child)::after {
+.Frise ol li:not(:last-child)::after { /* Gère les points des idées*/
     content: '';
     position: absolute;
     top: 50%;
@@ -63,36 +87,18 @@
     background: #CACDD2;
 }
 
-.Frise ol li div::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-}
+
 
 .Frise ol li:nth-child(odd) div {
     top: -16px;
     transform: translateY(-100%);
 }
 
-.Frise ol li:nth-child(odd) div::before {
-    top: 100%;
-    border-width: 8px 8px 0 0;
-    border-color: #CACDD2 transparent;
-}
 
 .Frise ol li:nth-child(even) div {
     top: calc(100% + 16px);
 }
 
-.Frise ol li:nth-child(even) div::before {
-    top: -8px;
-    border-width: 8px 0 0 8px;
-    border-color: transparent #CACDD2;
-}
 
 .Frise time {
     display: block;
