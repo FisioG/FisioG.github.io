@@ -10,8 +10,9 @@
         <link rel="stylesheet" href="saePPP.css">
         <link rel="stylesheet" href="frise.css">
         <script src="burgerMenu.js"></script>
-        <script src="friseVerticale.js"></script>
-        <script>window.onscroll = function(e) {animationVerticale()}</script>
+        <script src="friseHorizontale.js"></script>
+        <script> window.onload = function(e){scrollLeft()}
+        window.onscroll = function(e){deplFleche()}</script>
         <!--Essayer d'ameliorer l'appel du windows onscroll-->
     </head>
     <body>
@@ -68,7 +69,7 @@
         </section>
         <section class="decoupage" id="P2">
             <h1>Frise des projets</h1>
-            <section class="Frise">
+            <section class="Frise" id="Frise">
                 <ol>
                     <li>
                         <div>
@@ -104,9 +105,34 @@
                             <a href="" target="_bank">Retex Site web</a>
                         </div>
                     </li>
+                    <li>
+                        <div>
+                            <time>Janvier 2022</time> Création d'un site web (Front) d'une Entreprise, avec les languages HTML et CSS.
+                            <a href="" target="_bank">Retex Site web</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <time>Janvier 2022</time> Création d'un site web (Front) d'une Entreprise, avec les languages HTML et CSS.
+                            <a href="" target="_bank">Retex Site web</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <time>Janvier 2022</time> Création d'un site web (Front) d'une Entreprise, avec les languages HTML et CSS.
+                            <a href="" target="_bank">Retex Site web</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <time>Janvier 2022</time> Création d'un site web (Front) d'une Entreprise, avec les languages HTML et CSS.
+                            <a href="" target="_bank">Retex Site web</a>
+                        </div>
+                    </li>
                     <!--Ligne à toujours laisser pour que le dernier paragraphe soit visible avec un point-->
                     <li></li>
                 </ol>
+                <h2 id="flecheIndique">4-----</h2>
             </section>
                     
         </section>

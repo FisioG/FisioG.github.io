@@ -37,7 +37,7 @@
 
 .Frise ol {
     font-size: 0;
-    width: 100vw;
+    width: 110%;
     padding: 225px 0;
     transition: all 30ms;
 }
@@ -56,7 +56,7 @@
 }
 
 .Frise ol li:first-child{
-    background : linear-gradient(to right, #cacdd200 80%,#cacdd2)
+    background : linear-gradient(to right, #cacdd200 50%,#cacdd2)
 }
 
 .Frise ol li:not(li:first-child) { /*Gère les traits blancs sauf le premier*/
@@ -87,7 +87,10 @@
     background: #CACDD2;
 }
 
-
+#flecheIndique {
+    color: aliceblue;
+    position: absolute;
+}
 
 .Frise ol li:nth-child(odd) div {
     top: -16px;
