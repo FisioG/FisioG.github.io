@@ -13,8 +13,11 @@ function scrollLeft(){
     tmp.scrollLeft = tmp.scrollWidth;
 }
 
+let ninterv;
+
 function deplFleche() {
-    var fleche = document.getElementById('flecheIndique');
+    console.log('sus');
+    var fleche = document.getElementById('flecheFrise');
     fleche.animate([
         {//from
             opacity : 1,
@@ -23,5 +26,15 @@ function deplFleche() {
         {
             transform: 'translate(-100px, 0px)',
             opacity : 0
-        }],1000)
+        }],1400);
+    }
+
+function fonctionEntree() {
+    deplFleche();
+    ninterv = setInterval(deplFleche, 1400);
+}
+
+function fonctionSortie() {
+    clearInterval(ninterv);
+    ninterv = null;
 }

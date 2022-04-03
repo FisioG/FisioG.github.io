@@ -11,9 +11,12 @@
         <link rel="stylesheet" href="frise.css">
         <script src="burgerMenu.js"></script>
         <script src="friseHorizontale.js"></script>
-        <script> window.onload = function(e){scrollLeft()}
-        window.onscroll = function(e){deplFleche()}</script>
-        <!--Essayer d'ameliorer l'appel du windows onscroll-->
+        <script src="changementTheme.js"></script>
+        <script> document.addEventListener('DOMContentLoaded', function() {
+            scrollLeft();});
+            localStorage.setItem('theme','sombre');
+        
+        </script>
     </head>
     <body>
         <div class="menu-btn">
@@ -35,6 +38,9 @@
             });
         </script>
         <section id="menuSlide">
+            <div id="logoMode" onclick="changeTheme()">
+                <img src="logoSoleil.png" alt="modeNuit" id="imgMode"/>
+            </div>
             <ul id="liensSlide">
                 <li>Projet 1</li>
                 <li>Projet 1</li>
@@ -69,7 +75,7 @@
         </section>
         <section class="decoupage" id="P2">
             <h1>Frise des projets</h1>
-            <section class="Frise" id="Frise">
+            <section id="Frise" onmouseenter="fonctionEntree()" onmouseleave="fonctionSortie()">
                 <ol>
                     <li>
                         <div>
@@ -132,13 +138,13 @@
                     <!--Ligne à toujours laisser pour que le dernier paragraphe soit visible avec un point-->
                     <li></li>
                 </ol>
-                <h2 id="flecheIndique">4-----</h2>
+                <img src="fleche-fine-contour-vers-la-gauche.png" alt="4---" id="flecheFrise"/>
             </section>
-                    
         </section>
-        <footer>
-            <a href="">Contact</a>
+        <footer class="footer">
             <a href="#top">Acceuil</a>
+            <a href="https://www.flaticon.com/fr/icones-gratuites/la-fleche" title="la flèche icônes">La flèche icônes créées par Freepik - Flaticon</a>
+            <a href="">Contact</a>
         </footer>
     </body>
 </html>
