@@ -1,3 +1,9 @@
+*{font-family: 'Open Sans Light', 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  transition-property: background-color;
+  transition-duration: 2s;}
+
 body {
     margin: 0;
 }
@@ -103,6 +109,10 @@ body {
   .menu-btn.open .menu-btn__burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
     box-shadow: none;
+  }
+
+  .txtLien{
+    color : white;
   }
 
 #formulaire {
