@@ -109,6 +109,29 @@ body {
     padding: 40px;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label
+{
+	display: block;
+	width: 150px;
+}
+
+input,textarea{
+  margin: 10px;
 }
 
 footer {
