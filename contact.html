@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Portfolio <> LEVEQUE Loïc</title>
+        <link rel="icon" href="icone-utilisateur-gris.png">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="contact.css">
+        <script src="burgerMenu.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script src="" async defer></script>
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+        <script>
+            const menuBtn = document.querySelector('.menu-btn');
+            let menuOpen = false;
+            menuBtn.addEventListener('click', () => {
+            if(!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+                ouvrir();
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+                fermer();
+            }
+            });
+        </script>
+        <section id="menuSlide">
+            <div id="logoMode" onclick="changeTheme()">
+                <img src="logoSoleil.png" alt="modeNuit" id="imgMode"/>
+            </div>
+            <ul id="liensSlide">
+                <li><a class="txtLien">Projet 1</a></li>
+                <li><a class="txtLien">Projet 1</a></li>
+                <li><a class="txtLien">Projet 1</a></li>
+                <li><a class="txtLien">Projet 1</a></li>
+                <li><a class="txtLien">Projet 1</a></li>
+                <li><a class="txtLien">Projet 1</a></li>
+                <li><a class="txtLien">Projet 1</a></li>
+                <li><a class="txtLien">Projet 1</a></li>
+                <li><a class="txtLien">Projet 1</a></li>
+                <li><a class="txtLien">Projet 1</a></li>
+            </ul>
+        </section>
+        <section id="formulaire">
+            <form method="post" action="mail.php">
+                <fieldset>
+                    <legend>Vos coordonnées</legend>
+                    <p> <label for="zoneNom">Nom</label> : <input type="text" autocapitalize="characters" autofocus name="Nom" id="zoneNom" placeholder="Nom" required></p>
+                    <p><label for="zonePrenom">Prenom</label> : <input type="text" autocapitalize="on" name="Prenom" id="zonePrenom" placeholder="Prenom"></p>
+                    <p><label for="zoneMail">E-Mail</label> : <input type="email" name="e-mail" id="zoneMail" placeholder="Adresse mail" required></p>
+                </fieldset>
+            </br>
+                <fieldset>
+                    <legend>Votre message</legend>
+                    <p><label for="zoneMessage">Message</label> : </br><textarea name="message" id="zoneMessage" placeholder="Votre message..." rows="5" cols="40" required></textarea></p>
+
+                </fieldset>
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
+        <footer class="footer">
+            <a href="accueil.html">Accueil</a>
+            <a href="https://www.flaticon.com/fr/icones-gratuites/la-fleche" title="la flèche icônes">La flèche icônes créées par Freepik - Flaticon</a>
+            <a href="">Contact</a>
+        </footer>
+    </body>
+</html>

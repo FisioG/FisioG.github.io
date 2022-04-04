@@ -3,9 +3,14 @@ function changeTheme() {
     if (localStorage.getItem('theme') == 'sombre') {
         document.querySelector("#P1").style.backgroundColor = "#f4edea";
         document.querySelector("#P2").style.backgroundColor = "#F4D1AE";
+        document.querySelector("#P2").style.color = "black";
         document.querySelector(".footer").style.backgroundColor = '#c5d8d1';
         document.querySelector("#logoMode").style.backgroundColor = '#0c717e';
-        document.querySelector("#menuSlide").style.backgroundColor = '#06bcc1';
+        document.querySelector("#menuSlide").style.backgroundColor = '#c5d8d1';
+        let z = document.querySelectorAll(".txtLien")
+        z.forEach(element => {
+            element.style.color = 'black';
+        });
         localStorage.setItem('theme', 'clair');
         animLogo();
         document.getElementById('imgMode').src = 'logoLune.png';
@@ -16,6 +21,10 @@ function changeTheme() {
         document.querySelector(".footer").style.backgroundColor = '#c5d8d1';
         document.querySelector("#logoMode").style.backgroundColor = 'wheat';
         document.querySelector("#menuSlide").style.backgroundColor = '#12263a';
+        let z = document.querySelectorAll(".txtLien")
+        z.forEach(element => {
+            element.style.color = 'white';
+        });
         localStorage.setItem('theme', 'sombre');
         animLogo();
         document.getElementById('imgMode').src = 'logoSoleil.png';

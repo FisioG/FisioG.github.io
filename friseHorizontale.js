@@ -15,22 +15,21 @@ function scrollLeft(){
 
 let ninterv;
 
+
 function deplFleche() {
     console.log('sus');
     var fleche = document.getElementById('flecheFrise');
     fleche.animate([
-        {//from
-            opacity : 1,
-            transform: 'translate(0px, 0px)',
-        },
-        {
-            transform: 'translate(-100px, 0px)',
-            opacity : 0
-        }],1400);
+        {opacity : 0},
+        {opacity : 1},
+        {transform: 'translate(-25px, 0px)'},
+        {opacity : 0},
+        {transform: 'translate(-65px, 0px)'},
+
+    ],{duration : 1400});
     }
 
 function fonctionEntree() {
-    deplFleche();
     ninterv = setInterval(deplFleche, 1400);
 }
 

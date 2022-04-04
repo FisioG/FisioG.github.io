@@ -2,7 +2,7 @@
 #P2 h1 {
     font-size: 4vw ;
     color : #f4edea;
-    text-decoration:underline overline;
+    text-decoration:underline 5px;
     padding-bottom: 20px;
 }
 /*Code la TimeLine par George Martsoukos*/
@@ -89,11 +89,6 @@
     background: #CACDD2;
 }
 
-#flecheIndique {
-    color: aliceblue;
-    position: absolute;
-}
-
 #Frise ol li:nth-child(odd) div {
     top: -16px;
     transform: translateY(-100%);
@@ -121,4 +116,5 @@
     position: absolute;
     width: 50px;
     height: 50px;
+    opacity: 0;
 }
