@@ -62,9 +62,10 @@
                             <fieldset>
                                 <legend>Votre message</legend>
                                 <p><label for="message">Message :</label><textarea name="message" id="message" placeholder="Votre message..." rows="5" cols="40" required></textarea></p>
+                                <p><label for="attachment"> Fichier :</label><input type="file" name="attachment" accept="image/png, image/jpeg"></p>
                             </fieldset>
                             <input type="submit" value="Envoyer">
-
+                            <input type="hidden" name="_template" value="table">
                         </form>
                     </section>
         </section>
