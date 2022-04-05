@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="contact.css">
         <script src="burgerMenu.js"></script>
         <script src="changementTheme.js"></script>
+        <script src="contact.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -51,20 +52,15 @@
             </ul>
         </section>
         <section id="P1">
+            <h1>Contactez-moi !</h1>
             <section id="formulaire">
                         <form method="POST" action="https://formsubmit.co/743aff911d7743a439f2777b2d0347e8" id="form" enctype="multipart/form-data">
-                            <fieldset>
-                                <legend>Vos coordonnées</legend>
-                                <p> <label for="zoneNom">Nom :</label><input type="text" autocapitalize="characters" autofocus name="Nom" id="zoneNom" placeholder="Nom" required></p>
-                                <p><label for="zonePrenom">Prenom :</label><input type="text" autocapitalize="on" name="Prenom" id="zonePrenom" placeholder="Prenom"></p>
-                                <p><label for="zoneMail">E-Mail :</label><input type="email" name="email" id="zoneMail" placeholder="Adresse mail" required></p>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Votre message</legend>
-                                <p><label for="message">Message :</label><textarea name="message" id="message" placeholder="Votre message..." rows="5" cols="40" required></textarea></p>
-                                <p><label for="attachment"> Fichier :</label><input type="file" name="attachment" accept="image/png, image/jpeg"></p>
-                            </fieldset>
-                            <input type="submit" value="Envoyer">
+                            <p><input class="champ" type="text" autocapitalize="characters" autofocus name="Nom" id="zoneNom" placeholder="Nom" required></p>
+                            <p><input class="champ" type="text" autocapitalize="on" name="Prenom" id="zonePrenom" placeholder="Prenom"></p>
+                            <p><input class="champ" type="email" name="email" id="zoneMail" placeholder="Adresse-mail" required></p>
+                            <p><textarea name="message" id="message" placeholder="Votre message..." rows="5" cols="40" required></textarea></p>
+                            <p><input type="file" name="attachment" accept="image/png, image/jpeg"></p>
+                            <input id="buttonForm" type="submit" value="Envoyer" onclick="affichageValidity()">
                             <input type="hidden" name="_template" value="table">
                             <input type="hidden" name="_next" value="https://fisiog.github.io/thanks.html">
                         </form>
