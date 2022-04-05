@@ -155,7 +155,13 @@ input,textarea {
 .champ {
   width: 80%;
   height: 65%;
+  transition-duration: 0.5s;
 }
+
+#fichier {
+  background-color: gray;
+}
+
 fieldset {
   display: flex;
   flex-direction: column;

@@ -17,7 +17,6 @@ let ninterv;
 
 
 function deplFleche() {
-    console.log('sus');
     var fleche = document.getElementById('flecheFrise');
     fleche.animate([
         {opacity : 0},
