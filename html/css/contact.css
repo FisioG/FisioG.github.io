@@ -130,11 +130,33 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #0c717e;
-  width: 30%;
+  width: 35%;
   border-radius: 25px;
   border: 4px double black;
   align-items: center;
 }
+
+@media only screen and (max-width: 700px){
+#form {
+  display: flex;
+  flex-direction: column;
+  background-color: #0c717e;
+  width: 100%;
+  height: 200%;
+  padding-bottom: 100%;
+  border-radius: 0%;
+  border: 0;
+  align-items: center;
+  }
+#formulaire {
+    padding-bottom: 0vh;
+    display: flex;
+    justify-content: space-around;
+}
+}
+
+
+
 #form * {
   border-radius: 15px;
   text-align: center;
@@ -158,6 +180,15 @@ input,textarea {
   transition-duration: 0.5s;
 }
 
+.imgForm {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform: translate(-25px,7px);
+  z-index: -1;
+  transition: all 2s;
+}
+
 #fichier {
   background-color: gray;
 }
@@ -170,13 +201,16 @@ fieldset {
 
 
 input,textarea{
-  margin: 10px;
+  padding: 0.4em;
 }
 
 footer {
     background-color: #0c717e;
+    position: relative;
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
+    bottom: 0;
     align-items: center;
-    height: 40px;
+    height:50px;
 }
