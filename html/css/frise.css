@@ -1,0 +1,120 @@
+/*-----Frise chronologique-----*/
+#P2 h1 {
+    font-size: 4vw ;
+    color : #f4edea;
+    text-decoration:underline 5px;
+    padding-bottom: 20px;
+}
+/*Code la TimeLine par George Martsoukos*/
+
+#Frise {
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    border:double 5px;
+    border-color: #102335;
+    border-radius: 15px;
+    overflow-x: scroll;
+}
+
+#Frise::-webkit-scrollbar {
+    height: 10px;
+    width: auto;
+}
+#Frise::-webkit-scrollbar-track:hover {
+    background-color: #8be3c3 ;
+}
+#Frise::-webkit-scrollbar-track {
+    background-color: #b1dbcc;
+    border-radius: 20px;
+}
+#Frise::-webkit-scrollbar-thumb {
+    background-color: #7bd6d5;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0,0.8);
+    border-radius: 15px;
+}
+
+#Frise ol {
+    font-size: 0;
+    width: 110%;
+    padding: 225px 0;
+    transition: all 30ms;
+}
+
+#Frise ol li {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    width: 160px;
+    height: 3px;
+    background: #CACDD2;
+}
+
+#Frise ol li:last-child { /* Correspond au dernier trait blanc*/
+    width: 280px
+}
+
+#Frise ol li:first-child{
+    background : linear-gradient(to right, #cacdd200 50%,#cacdd2)
+}
+
+#Frise ol li:not(li:first-child) { /*Gère les traits blancs sauf le premier*/
+    margin-left: 14px;
+}
+
+#Frise ol li:not(:last-child)::after { /* Gère les points des idées*/
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1px);
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #D66853;
+}
+
+#Frise ol li div {
+    position: absolute;
+    left: calc(100% + 7px);
+    width: 280px;
+    padding: 15px;
+    font-size: 1rem;
+    white-space: normal;
+    color: black;
+    background: #CACDD2;
+}
+
+#Frise ol li:nth-child(odd) div {
+    top: -16px;
+    transform: translateY(-100%);
+}
+
+
+#Frise ol li:nth-child(even) div {
+    top: calc(100% + 16px);
+}
+
+
+#Frise time {
+    display: block;
+    font-size: 1.2rem;
+    font-size: bold;
+    margin-bottom: 8px;
+}
+
+#Frise a {
+    text-decoration: none;
+}
+
+#flecheFrise{
+    margin-top: 10px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
