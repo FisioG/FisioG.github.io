@@ -13,7 +13,7 @@ function changeTheme() {
         });
         localStorage.setItem('theme', 'clair');
         animLogo();
-        document.getElementById('imgMode').src = 'logoLune.png';
+        document.getElementById('imgMode').src = 'images/logoLune.png';
     }
     else {
         document.querySelector("#P1").style.backgroundColor = "#f4d1ae";
@@ -27,7 +27,8 @@ function changeTheme() {
         });
         localStorage.setItem('theme', 'sombre');
         animLogo();
-        document.getElementById('imgMode').src = 'logoSoleil.png';
+        document.querySelector(".footer").style.backgroundColor = '#0c717e';
+        document.getElementById('imgMode').src = 'images/logoSoleil.png';
     }
 }
 
