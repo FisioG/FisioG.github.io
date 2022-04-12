@@ -123,7 +123,8 @@ body {
 #formulaire {
     padding-bottom: 10vh;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 
 #form {
@@ -131,6 +132,7 @@ body {
   flex-direction: column;
   background-color: #0c717e;
   width: 35%;
+  padding: 5%;
   border-radius: 25px;
   border: 4px double black;
   align-items: center;
@@ -208,7 +210,7 @@ input,textarea{
 
 footer {
     background-color: #0c717e;
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
