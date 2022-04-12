@@ -209,12 +209,12 @@ input,textarea{
 }
 
 footer {
-    background-color: #0c717e;
-    position: fixed;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    bottom: 0;
-    align-items: center;
-    height:50px;
+  background-color: #0c717e;
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  bottom: 0;
+  align-items: center;
+  height:50px;
 }

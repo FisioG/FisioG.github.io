@@ -166,6 +166,7 @@ flex: 2;
 
 #P3 {
   background-color: #0f4c5c;
+  padding-bottom: 120px;
 }
 #P3 li {
   list-style: none;
@@ -177,7 +178,7 @@ flex: 2;
 
 footer {
   background-color: #0c717e;
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -185,4 +186,3 @@ footer {
   align-items: center;
   height:50px;
 }
-
