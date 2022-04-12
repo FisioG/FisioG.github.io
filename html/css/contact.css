@@ -9,7 +9,7 @@ body {
     background-color: #c5d8d1;
 }
 #menuSlide {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -67,7 +67,7 @@ body {
 
 .menu-btn {
     z-index: 12;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,7 +208,7 @@ input,textarea{
 
 footer {
     background-color: #0c717e;
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
