@@ -8,6 +8,7 @@ body {
     margin: 0;
     background-color: #c5d8d1;
 }
+
 #menuSlide {
     position: absolute;
     display: flex;
@@ -18,7 +19,7 @@ body {
     width: 10vw;
     min-width: 100px;
     min-height: 100px;
-    left : -20vw;
+    left : -40vw;
     border-left-width : 0;
     border-top-width: 0;
     border-bottom-right-radius: 15px;
@@ -127,12 +128,16 @@ body {
     align-items: center;
 }
 
+h2{
+  font-size: 4vw;
+}
+
 #form {
   display: flex;
   flex-direction: column;
   background-color: #0c717e;
-  width: 35%;
-  padding: 5%;
+  width: 45%;
+  padding: 3%;
   border-radius: 25px;
   border: 4px double black;
   align-items: center;
@@ -151,11 +156,11 @@ body {
   align-items: center;
   }
 #formulaire {
-    padding-bottom: 0vh;
-    display: flex;
-    justify-content: space-around;
+  padding-bottom: 0vh;
+  display: flex;
 }
 }
+
 
 
 
@@ -178,7 +183,7 @@ input,textarea {
 
 
 .champ {
-  width: 80%;
+  width: 100%;
   height: 65%;
   transition-duration: 0.5s;
 }
@@ -210,11 +215,11 @@ input,textarea{
 
 footer {
   background-color: #0c717e;
-  position: fixed;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   bottom: 0;
+  font-size: 1rem;
   align-items: center;
   height:50px;
 }
