@@ -174,19 +174,47 @@ flex: 2;
 }
 
 
-.projet:nth-child(odd) {
-  width: 95%;
-  margin: 20px;
-  background:linear-gradient(to right, #c5d8d1,#0c717e);
-  border-radius: 20px 5px;
+.projet:nth-child(even) {
 
+  background:linear-gradient(to bottom right, #c5d8d1,#0c717e);
 }
 
-.projet:nth-child(even) {
+.projet {
   width: 95%;
+  height: 20vh;
+  min-height: 120px;
   margin: 20px;
-  background:linear-gradient(to right, #c5d8d1,#0c717e);
-  border-radius: 5px 20px;
+  display: flex;
+  border-radius: 10px
+}
+
+.part1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.part1 div {
+  text-align: left;
+}
+
+.part2 {
+  z-index: 400;
+  flex: 1;
+  overflow: hidden;
+}
+
+
+.part2 img {
+  width: 100%;
+  overflow: hidden;
+
+  border-radius: 0 30% 0px 0px;
+}
+
+.projet:nth-child(odd) {
+  background:linear-gradient(to left top, #c5d8d1,#0c717e);
 
 }
 
