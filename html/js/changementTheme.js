@@ -11,6 +11,10 @@ function changeTheme() {
         z.forEach(element => {
             element.style.color = 'black';
         });
+        let proj = document.querySelectorAll(".projet")
+        proj.forEach(element => {
+            element.style.background = 'linear-gradient(to right,#0c717e,#c5d8d1)';
+        });
         localStorage.setItem('theme', 'clair');
         animLogo();
         document.getElementById('imgMode').src = 'images/logoLune.png';
@@ -24,6 +28,10 @@ function changeTheme() {
         let z = document.querySelectorAll(".txtLien")
         z.forEach(element => {
             element.style.color = 'white';
+        });
+        let proj = document.querySelectorAll(".projet")
+        proj.forEach(element => {
+            element.style.background = 'linear-gradient(to right,#c5d8d1,#0c717e)';
         });
         localStorage.setItem('theme', 'sombre');
         animLogo();

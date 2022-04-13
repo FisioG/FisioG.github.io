@@ -167,13 +167,27 @@ flex: 2;
 #P3 {
   background-color: #0f4c5c;
   padding-bottom: 120px;
-}
-#P3 li {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
 }
 
-.projet {
-  background-color :#0c717e;
+
+.projet:nth-child(odd) {
+  width: 95%;
+  margin: 20px;
+  background:linear-gradient(to right, #c5d8d1,#0c717e);
+  border-radius: 20px 5px;
+
+}
+
+.projet:nth-child(even) {
+  width: 95%;
+  margin: 20px;
+  background:linear-gradient(to right, #c5d8d1,#0c717e);
+  border-radius: 5px 20px;
+
 }
 
 footer {
