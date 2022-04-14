@@ -13,6 +13,7 @@
         <script src="js/burgerMenu.js"></script>
         <script src="js/friseHorizontale.js"></script>
         <script src="js/changementTheme.js"></script>
+        <script src="js/filtreProjet.js"></script>
         <script> document.addEventListener('DOMContentLoaded', function() {
             scrollLeft();});
             localStorage.setItem('theme','sombre');
@@ -121,11 +122,21 @@
         </section>
         <section class="decoupage" id="P3">
             <h1>Projets</h1>
-                    <div class="projet" id="siteEnt">
+                <div id="divFiltre" title="Filtrez les projets en sélectionnant un language">
+                    <img src="images/html.png" alt="html5" class="imgProjet imghtml" onclick="verifSelect('html');"/>
+                    <img src="images/css.png" alt="css3" class="imgProjet imgcss" onclick="verifSelect('css')"/>
+                    <img src="images/bash.png" alt="bash" class="imgProjet imgbash" onclick="verifSelect('bash')"/>
+                    <img src="images/java.png" alt="java" class="imgProjet imgjava" onclick="verifSelect('java')"/>
+                    <img src="images/python.png" alt="python" class="imgProjet imgpython" onclick="verifSelect('python')"/>
+                    <img src="images/cSharp.png" alt="cSharp" class="imgProjet imgcSharp" onclick="verifSelect('cSharp')"/>
+                </div>
+                    <div class="projet html css" id="siteEnt">
                         <div class="part1">
-                            <h2>
-                                For.All.Players
-                            </h2>
+                            <div>
+                                <h2>
+                                    For.All.Players
+                                </h2>
+                               </div>
                             <div>
                                 <img src="images/html.png" alt="html5" class="imgProjet"/>
                                 <img src="images/css.png" alt="css3" class="imgProjet"/>
@@ -138,11 +149,13 @@
                             </a>
                         </div>
                     </div>
-                    <div class="projet" id="lowatem">
+                    <div class="projet java" id="lowatem">
                         <div class="part1">
-                            <h2>
-                                Lowatem
-                            </h2>
+                            <div>
+                                <h2>
+                                    Lowatem
+                                </h2>
+                            </div>
                             <div>
                                 <img src="images/java.png" alt="java" class="imgProjet"/>
                             </div>
@@ -153,11 +166,13 @@
                             </a>
                         </div>
                     </div>
-                    <div class="projet" id="sysDiv">
+                    <div class="projet bash" id="sysDiv">
                         <div class="part1">
-                            <h2>
-                                VMWARE
-                            </h2>
+                            <div>
+                                <h2>
+                                    VMWare
+                                </h2>
+                               </div>
                             <div>
                                 <img src="images/bash.png" alt="bash" class="imgProjet"/>
                             </div>
@@ -168,11 +183,13 @@
                             </a>
                         </div>
                     </div>
-                    <div class="projet" id="pongDiv">
+                    <div class="projet java" id="pongDiv">
                        <div class="part1">
+                           <div>
                             <h2>
                                 Pong
                             </h2>
+                           </div>
                             <div>
                                 <img src="images/java.png" alt="java" class="imgProjet"/>
                             </div>

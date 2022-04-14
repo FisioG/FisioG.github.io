@@ -192,7 +192,7 @@ input,textarea {
   position: absolute;
   width: 20px;
   height: 20px;
-  transform: translate(-25px,7px);
+  transform: translate(85px,-27px);
   z-index: -1;
   transition: all 2s;
   opacity: 0;

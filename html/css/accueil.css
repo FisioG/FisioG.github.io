@@ -2,7 +2,7 @@
   font-family: 'Open Sans Light', 'Open Sans', sans-serif;
   scroll-behavior: smooth;
   text-decoration: none;
-  transition-property: background-color,color;
+  transition-property: background-color,color,display;
   transition-duration: 2s;
 }
 
@@ -178,6 +178,11 @@ flex: 2;
   height: max-content;
 }
 
+#divFiltre {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
 
 .projet:nth-child(even) {
 
@@ -190,7 +195,16 @@ flex: 2;
   min-height: 120px;
   margin: 20px;
   display: flex;
-  border-radius: 10px
+  border-radius: 10px;
+  overflow : hidden;
+}
+
+.selectionne {
+  border:6px double #c5d8d1;
+  width: 110%;
+  padding: 5px;
+  height: 110%;
+  border-radius: 15px;
 }
 
 .part1 {
