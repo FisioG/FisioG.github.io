@@ -191,8 +191,7 @@ flex: 2;
 
 .projet {
   width: 95%;
-  height: 20vh;
-  min-height: 120px;
+  max-height: 20vh;
   margin: 20px;
   display: flex;
   border-radius: 10px;
