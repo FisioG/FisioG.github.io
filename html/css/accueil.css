@@ -170,13 +170,11 @@ h1 {
 }
 
 #P3 {
-  background-color: #0f4c5c;
-  padding-bottom: 120px;
-  padding-top: 120px;
+  background-color: #41575c;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: max-content;
+  height: min-content;
 }
 
 #divFiltre {
@@ -187,16 +185,29 @@ h1 {
 
 .projet:nth-child(even) {
 
-  background:linear-gradient(to bottom right, #c5d8d1,#0c717e);
+  background:linear-gradient(to bottom right, #c5d8d1,#3b0c7e);
 }
 
 .projet {
   width: 95%;
-  max-height: 20vh;
   margin: 20px;
+  max-height: 20vh;
   display: flex;
   border-radius: 10px;
   overflow : hidden;
+  padding-bottom : 2%;
+  padding-left: 2%;
+}
+
+.projet--hidden {
+  padding: 0;
+  opacity: 0;
+  margin: 0;
+  max-height: 0;
+}
+
+.projet--transition {
+  transition: all ease-in-out 1s;
 }
 
 .selectionne {
@@ -224,20 +235,23 @@ h1 {
 .part2 {
   z-index: 400;
   flex: 1;
-  overflow: hidden;
+  overflow: visible;
 }
 .part2:hover{
-  filter: blur(2px);
+  filter: blur(1px);
 }
 
 .part2 img {
   width: 100%;
-  overflow: hidden;
-  border-radius: 0 30% 0px 0px;
+  height: 200px;
+  border-radius: 0 5% 10px 400px;
+  object-fit: cover;
+  object-position: center top;
 }
 
+
 .projet:nth-child(odd) {
-  background:linear-gradient(to left top, #c5d8d1,#0c717e);
+  background:linear-gradient(to left top, #c5d8d1,#340c7e);
 }
 
 .imgProjet{
