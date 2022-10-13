@@ -15,7 +15,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: #102335;
   height: max-content;
   width: 10vw;
   min-width: 100px;
@@ -158,10 +157,8 @@ h1 {
   display: flex;
   justify-content: space-around;
   height: fit-content;
-  background-color:#f4d1ae;
 }
 #P2 {
-  background-color: #12263a;
   width: 100%;
   height: max-content;
   padding-top: 100px;
@@ -169,8 +166,52 @@ h1 {
 
 }
 
-#P3 {
+.P1--darkTheme {
+  background-color:#f4d1ae;
+}
+
+.themes {
+  transition: all 1s;
+}
+
+.P1--lightTheme{
+  background-color: #c29f90;
+}
+
+.P2--lightTheme{
+  background-color: #F4D1AE;
+  color: black;
+}
+
+.P2--darkTheme{
+  background-color: #12263a;
+}
+
+.footer--lightTheme{
+  background-color: #c5d8d1;
+}
+
+.menuSlide--darkTheme {
+  background-color: #102335;
+}
+
+.menuSlide--lightTheme {
+  background-color: #c5d8d1;
+}
+
+.footer--darkTheme {
+  background-color: #0c717e;
+}
+
+.P3--darkTheme{
   background-color: #41575c;
+}
+
+.P3--lightTheme{
+  background-color: #73cdac;
+}
+
+#P3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -261,7 +302,6 @@ h1 {
 
 
 footer {
-  background-color: #0c717e;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
