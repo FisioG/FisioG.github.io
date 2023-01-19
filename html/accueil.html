@@ -21,10 +21,6 @@
         <script src="js/friseHorizontale.js"></script>
         <script src="js/changementTheme.js"></script>
         <script src="js/filtreProjet.js"></script>
-        <script> document.addEventListener('DOMContentLoaded', function() {
-            scrollLeft();});
-            localStorage.setItem('theme','sombre');
-        </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
@@ -49,7 +45,7 @@
             <div class="row">
                 <div class="col-4">
                     <div class="list-group" id="list-tab" role="tablist">
-                    <p class="list-group-item" id="list-home-list" data-toggle="list" role="tab" aria-controls="home">A propos de moi</p>
+                    <p class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">A propos de moi</p>
                     <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Mon profil</a>
                     <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Etudes</a>
                     <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Passions</a>
@@ -57,7 +53,11 @@
                 </div>
                 <div class="col-8">
                     <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Choisissez une des informations qui vous intéresse</div>
+                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                        <p>Choisissez une des informations qui vous intéresse</p>
+                        <hr>
+                        <img src="images/profil.png" class="rounded thumbnail" alt="Photo de profil">
+                    </div>
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Je m'appelle LEVEQUE Loïc, j'ai 19 ans et je réside à Pessac. Je suis actuellement étudiant et à la recherche d'une alternance pour l'année prochaine.</div>
                     <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Je suis étudiant en deuxième année de BUT informatique à l'IUT de Bordeaux (Gradignan).</div>
                     <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">Je suis passioné par l'informatique, l'automobile et les sports mécaniques en général, le bricolage et la musique.</div>
